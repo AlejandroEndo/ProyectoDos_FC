@@ -16,13 +16,16 @@ public class HighPass {
 	private int matrixValue;
 	private int matrixSize;
 	private int blurIntesity;
+	
+	private int alpha;
 
 	private float[][] matrix = { { 1, 2, 1 }, { 2, 4, 2 }, { 1, 2, 1 } };
 
-	public HighPass(PApplet app, PImage img, int x) {
+	public HighPass(PApplet app, PImage img, int x, int alpha) {
 		this.app = app;
 		this.img = img;
 		this.x = x;
+		this.alpha = alpha;
 
 		blurIntesity = 10;
 		matrixSize = 3;
@@ -35,15 +38,13 @@ public class HighPass {
 
 		grayScale(img);
 
-//		result = app.createImage(img.width, img.height, PConstants.RGB);
-
 		result = img.copy();
 		filter(this.img, result);
 	}
 
 	public void display() {
 		app.image(img, x, 0);
-		app.tint(255, 100);
+		app.tint(255, alpha);
 		app.image(result, img.width, 0);
 		app.noTint();
 	}
@@ -132,5 +133,13 @@ public class HighPass {
 			}
 		}
 		img.updatePixels();
+	}
+	
+	public int getAlpha() {
+		return alpha;
+	}
+	
+	public void setAlpha(int alpha) {
+		this.alpha = alpha;
 	}
 }
