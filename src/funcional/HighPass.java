@@ -27,7 +27,7 @@ public class HighPass {
 		this.x = x;
 		this.alpha = alpha;
 
-		blurIntesity = 10;
+		blurIntesity = 60;
 		matrixSize = 3;
 
 		for (int i = 0; i < matrixSize; i++) {

@@ -27,7 +27,7 @@ public class LowPass {
 		this.x = x;
 		this.alpha = alpha;
 
-		blurIntesity = 10;
+		blurIntesity = 20;
 		matrixSize = 3;
 
 		for (int i = 0; i < matrixSize; i++) {
