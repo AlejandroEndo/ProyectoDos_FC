@@ -1,3 +1,3 @@
 # ProyectoDos_FC
 
-![alt text](https://raw.githubusercontent.com/AlejandroEndo/ProyectoDos_FC/data/result/ss.jpg)
+![Screen shot](https://github.com/AlejandroEndo/ProyectoDos_FC/data/result/ss.jpg)
